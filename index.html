@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Project Calculator!</title>
+	<meta name="description" content="This is my attempt at creating a calculator from scratch.">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<!-- Lesson Learned: Add jQuery script before scripts calling jQuery -->
+	<script type="text/javascript" src="jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="application.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="s-container">
+			<div class="screen">
+			</div>
+		</div>
+		<div class="b-container">
+			<div class="column">
+				<div class="button number">1</div>
+				<div class="button number">4</div>
+				<div class="button number">7</div>
+				<div class="button number">0</div>
+			</div>
+			<div class="column">
+				<div class="button number">2</div>
+				<div class="button number">5</div>
+				<div class="button number">8</div>
+				<div class="button" id="clear">C</div>
+			</div>
+			<div class="column">
+				<div class="button number">3</div>
+				<div class="button number">6</div>
+				<div class="button number">9</div>
+				<div class="button" id="equals">=</div>
+			</div>
+			<div class="column">
+				<div class="button" id="divide">/</div>
+				<div class="button" id="multiply">x</div>
+				<div class="button" id="plus">+</div>
+				<div class="button" id="minus">-</div>
+			</div>
+		</div>
+	</div>
+	<div class="tasks">
+		<h2>Changes to Make</h2>
+    	<ul>
+    		<li>Change numbers to "number" id & recode number buttons in JS</li>
+    		<li>Fix the Equals button to clear Total after number is pressed.</li>
+       		<li>Clean calculator design</li>
+        	<li>Mobile Responsiveness</li>
+        	<li>UI Options</li>
+        	<li>add limit to digits.</li>
+    	</ul>
+    </div>
+</body>
+</html>
