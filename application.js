@@ -44,51 +44,6 @@ $(document).ready(function() {
 		screenInput();
 	});
 
-	$("#2").click(function(){
-		input = input*10+2;
-		screenInput();
-	});
-
-	$("#3").click(function(){
-		input = input*10+3;
-		screenInput();
-	});
-
-	$("#4").click(function(){
-		input = input*10+4;
-		screenInput();
-	});
-
-	$("#5").click(function(){
-		input = input*10+5;
-		screenInput();
-	});
-
-	$("#6").click(function(){
-		input = input*10+6;
-		screenInput();
-	});
-
-	$("#7").click(function(){
-		input = input*10+7;
-		screenInput();
-	});
-
-	$("#8").click(function(){
-		input = input*10+8;
-		screenInput();
-	});
-
-	$("#9").click(function(){
-		input = input*10+9;
-		screenInput();
-	});
-
-	$("#0").click(function(){
-		input = input*10;
-		screenInput();
-	});
-
 	$("#clear").click(function() {
 		total = 0;
 		input = 0;
@@ -132,28 +87,3 @@ $(document).ready(function() {
 		screenTotal();
 	});
 });
-
-
-
-/*Var Total
-Var Input
-Var Operation = Plus
-
-On 1, multiply input by 10 & add 1
-On 2, multiply input by 10 & add 2
-On 3, multiply input by 10 & add 3
-On 4, multiply input by 10 & add 4
-On 5, multiply input by 10 & add 5
-On 6, multiply input by 10 & add 6
-On 7, multiply input by 10 & add 7
-On 8, multiply input by 10 & add 8
-On 9, multiply input by 10 & add 9
-On 0, multiply input by 10 & add 0
-
-On addition, take input on current operation, and calculate into total. Then change operation to plus.
-On subtraction, take input on current operation, and calculate into total. Then change operation to minus.
-On division, take input on current operation, and calculate into total. Then change operation to divide.
-On multiplication, take input on current operation, and calculate into total. Then change operation to multiply.
-On equals, take input on current operation, and calculate into total. Show Total.
-
-On C, clear Input, clear total, and change operation to plus.*/
