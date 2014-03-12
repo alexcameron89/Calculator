@@ -4,7 +4,9 @@ $(document).ready(function() {
 	//Input takes the current number to be calculated into total
 	var input = 0;
 	//Operation takes the operation(+,-,*,/) for the current input
-	var operation = "plus";
+	var operation = "+";
+
+	var justCalculated = false;
 
 	//Shows the total
 	var screenTotal = function() {
@@ -19,19 +21,19 @@ $(document).ready(function() {
 	//Based on operation, calculates the input into total
 	var calculate = function() {
 
-		if(operation == "plus") {
+		if(operation == "+") {
 			total = total + input;
 		};
 
-		if(operation == "minus") {
+		if(operation == "-") {
 			total = total - input;
 		};
 
-		if(operation == "multiply") {
+		if(operation == "x") {
 			total = total * input;
 		};
 
-		if(operation == "divide") {
+		if(operation == "/") {
 			total = total/input;
 		};
 	};
@@ -39,7 +41,12 @@ $(document).ready(function() {
 
 //Buttons and their functions
 	$(".number").click(function(){
-		console.log($(this).text());
+		if(justCalculated == true) {
+			input = 0;
+			total = 0;
+			operation = "+";
+			justCalculated = false;
+		};
 		input = input*10+Number($(this).text());
 		screenInput();
 	});
@@ -47,43 +54,27 @@ $(document).ready(function() {
 	$("#clear").click(function() {
 		total = 0;
 		input = 0;
-		operation = "plus";
+		operation = "+";
+		justCalculated = false;
 		screenTotal();
 	});
 
 	$("#equals").click(function() {
 		calculate();
 		screenTotal();
-		input = 0;
-		operation = "plus";
-		total = 0;
+		justCalculated = true;
 	});
 
-	$("#plus").click(function() {
+	$(".operator").click(function() {
+		if(justCalculated == true){
+			input = 0;
+			operation = $(this).text();
+			justCalculated = false;
+		} else {
 		calculate();
-		operation = "plus";
+		operation = $(this).text();
 		input = 0;
 		screenTotal();
-	});
-
-	$("#minus").click(function() {
-		calculate();
-		operation = "minus";
-		input = 0;
-		screenTotal();
-	});
-
-	$("#multiply").click(function() {
-		calculate();
-		operation = "multiply";
-		input = 0;
-		screenTotal();
-	});
-
-	$("#divide").click(function() {
-		calculate();
-		operation = "divide";
-		input = 0;
-		screenTotal();
+			};
 	});
 });
